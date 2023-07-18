@@ -3,11 +3,17 @@
   flex-direction: column;
   gap: 0.5em;
 
-  width: 200px;
+  width: 300px;
   padding: 1em;
 
   border: solid 0.1em;
   border-radius: 1.5em;
+}
+
+.hero {
+  margin-bottom: 1em;
+  border-radius: 1.5em;
+  box-shadow: 5px 5px 5px gray;
 }
 
 .tagbox {
