@@ -1,4 +1,10 @@
+@use "@/config/variable" as var;
+
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  color: var.$black;
 }

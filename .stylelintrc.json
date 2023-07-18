@@ -2,7 +2,9 @@
   "extends": ["stylelint-config-standard-scss", "stylelint-config-clean-order"],
   "rules": {
     "max-nesting-depth": 1,
-    "selector-no-qualifying-type": true
+    "selector-no-qualifying-type": true,
+    "color-function-notation": "legacy",
+    "alpha-value-notation": "number"
   },
   "ignoreFiles": ["**/node_modules/**"]
 }

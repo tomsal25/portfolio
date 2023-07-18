@@ -1,5 +1,5 @@
 import { graphql, HeadFC, PageProps } from "gatsby";
-import MainLayout from "../features/Layouts/MainLayout";
+import { Layout } from "../features/Layouts";
 
 export const query = graphql`
   query Post($slug: String!) {
@@ -21,10 +21,10 @@ const Post = ({ data }: PageProps<Queries.PostQuery>) => {
   if (!html) return;
 
   return (
-    <MainLayout>
+    <Layout>
       <h1>{data.markdownRemark.frontmatter?.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: html }} />
-    </MainLayout>
+    </Layout>
   );
 };
 

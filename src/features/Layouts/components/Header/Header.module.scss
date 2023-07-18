@@ -1,8 +1,15 @@
+@use "@/config/variable" as var;
+
 .header {
-  position: sticky;
   display: flex;
   align-items: center;
-  height: 3rem;
+
+  height: 3em;
+  margin: 1em 5vw;
+  padding: 0 5vw;
+
+  border: 0.1em dashed var.$black;
+  border-radius: 1.2em;
 }
 
 .linkcontainer {

@@ -53,3 +53,13 @@ exports.onCreateBabelConfig = ({ actions }) => {
     },
   });
 };
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        "@/config": path.resolve(__dirname, "src/config"),
+      },
+    },
+  });
+};

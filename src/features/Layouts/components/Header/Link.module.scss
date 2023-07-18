@@ -1,3 +1,51 @@
+@use "@/config/variable" as var;
+
+.box {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin link-underline() {
+  $line-length: 10%;
+  $line-width: 0.15em;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: calc(-1 * $line-length / 2);
+
+    width: calc(100% + $line-length);
+    height: $line-width;
+  }
+}
+
+@mixin underline-color($color) {
+  @if type-of($color) != color {
+    @error "use color as an argument of underline-color";
+  }
+
+  background: $color;
+}
+
 .link {
+  @include link-underline;
+
+  position: relative;
   font-weight: bold;
+  color: var.$black-light;
+  text-decoration: none;
+
+  &:hover::after {
+    @include underline-color(var.$primary-light);
+  }
+}
+
+.active {
+  color: var.$black;
+
+  &::after {
+    @include underline-color(var.$primary-main);
+  }
 }

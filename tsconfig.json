@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "esnext",
+    "baseUrl": "./src",
     "lib": ["dom", "esnext"],
     "jsx": "react-jsx",
     "module": "esnext",
@@ -8,7 +9,10 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "@/config/*": ["config/*"]
+    }
   },
   "include": [
     "./src/**/*",

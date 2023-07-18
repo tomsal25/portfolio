@@ -1,6 +1,6 @@
 import { graphql, PageProps } from "gatsby";
-import Card from "../components/Card";
-import MainLayout from "../features/Layouts/MainLayout";
+import { Card, CardContainer } from "../features/Card";
+import { Layout } from "../features/Layouts";
 
 export const query = graphql`
   query Work {
@@ -28,30 +28,28 @@ const Work = ({ data }: PageProps<Queries.WorkQuery>) => {
   const { edges } = data.allMarkdownRemark;
 
   return (
-    <MainLayout>
-      <div>
-        <h1>全ての記事</h1>
-        <div style={{ display: "flex", gap: 10 }}>
-          {edges.map(edge => {
-            const frontmatter = edge.node.frontmatter;
-            if (!frontmatter) return;
+    <Layout>
+      <h1>今までやったもの</h1>
+      <CardContainer>
+        {edges.map(edge => {
+          const frontmatter = edge.node.frontmatter;
+          if (!frontmatter) return;
 
-            const { date, tags, title } = frontmatter;
-            if (!date || !title) return;
+          const { date, tags, title } = frontmatter;
+          if (!date || !title) return;
 
-            return (
-              <Card
-                key={edge.node.id}
-                date={date}
-                tags={tags ?? []}
-                title={title}
-                slug={edge.node.fields?.slug ?? "/404"}
-              />
-            );
-          })}
-        </div>
-      </div>
-    </MainLayout>
+          return (
+            <Card
+              key={edge.node.id}
+              date={date}
+              tags={tags ?? []}
+              title={title}
+              slug={edge.node.fields?.slug ?? "/404"}
+            />
+          );
+        })}
+      </CardContainer>
+    </Layout>
   );
 };
 

@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
+import Tag from "../Tag/Tag";
 import styles from "./Card.module.scss";
-import Tag from "./Tag";
 
 interface Props {
   date: string;
@@ -12,7 +12,7 @@ interface Props {
 const Card = ({ date, tags, title, slug }: Props) => {
   return (
     <div className={styles.card}>
-      <div className={styles.tagcontainer}>
+      <div className={styles.tagbox}>
         {tags.map(tag => {
           if (tag) {
             return <Tag key={tag} name={tag} />;

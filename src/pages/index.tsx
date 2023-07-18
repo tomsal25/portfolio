@@ -1,13 +1,13 @@
 import "../config/style.scss";
-import MainLayout from "../features/Layouts/MainLayout";
+import { Layout } from "../features/Layouts";
 
 export const Head = () => <title>ポートフォリオ</title>;
 
 const Index = () => {
   return (
-    <MainLayout>
+    <Layout>
       <h1>portfolio</h1>
-    </MainLayout>
+    </Layout>
   );
 };
 
