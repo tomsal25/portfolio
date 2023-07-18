@@ -8,6 +8,7 @@ export const query = graphql`
       html
       frontmatter {
         date(formatString: "YYYY年MM月DD日")
+        update(formatString: "YYYY年MM月DD日")
         title
       }
     }
@@ -25,12 +26,12 @@ const Post = ({ data }: PageProps<Queries.PostQuery>) => {
   const frontmatter = data.markdownRemark.frontmatter;
   if (!frontmatter) return;
 
-  const { date, title } = frontmatter;
-  if (!date || !title) return;
+  const { date, update, title } = frontmatter;
+  if (!date || !update || !title) return;
 
   return (
     <Layout>
-      <Article date={date} title={title}>
+      <Article date={date} update={update} title={title}>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </Article>
     </Layout>
