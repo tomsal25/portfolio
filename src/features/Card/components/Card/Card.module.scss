@@ -1,9 +1,17 @@
 .card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+
+  width: 200px;
   padding: 1em;
+
   border: solid 0.1em;
+  border-radius: 1.5em;
 }
 
 .tagbox {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5em;
 }

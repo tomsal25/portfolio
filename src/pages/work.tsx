@@ -12,7 +12,7 @@ export const query = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "YYYY年MM月DD日")
+            date(formatString: "YYYY/MM/DD")
             tags
             title
           }
@@ -29,7 +29,7 @@ const Work = ({ data }: PageProps<Queries.WorkQuery>) => {
 
   return (
     <Layout>
-      <h1>今までやったもの</h1>
+      <h1 style={{ textAlign: "center" }}>今までやったもの</h1>
       <CardContainer>
         {edges.map(edge => {
           const frontmatter = edge.node.frontmatter;

@@ -22,7 +22,7 @@ const Card = ({ date, tags, title, slug }: Props) => {
       <Link to={slug}>
         <h2>{title}</h2>
       </Link>
-      <p>{date}</p>
+      <div>{date}</div>
     </div>
   );
 };
