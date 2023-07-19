@@ -31,9 +31,7 @@ const Post = ({ data }: PageProps<Queries.PostQuery>) => {
 
   return (
     <Layout>
-      <Article date={date} update={update} title={title}>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </Article>
+      <Article date={date} update={update} title={title} html={html} />
     </Layout>
   );
 };

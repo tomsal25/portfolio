@@ -6,10 +6,11 @@ interface Props {
   date: string;
   update: string;
   title: string;
+  html: string;
   children: ReactNode;
 }
 
-const Article = ({ date, update, title, children }: Props) => {
+const Article = ({ date, update, title, html }: Props) => {
   return (
     <>
       <div className={styles.back}>
@@ -24,7 +25,7 @@ const Article = ({ date, update, title, children }: Props) => {
           <div className={styles.date}>{`更新日：${update}`}</div>
         )}
       </div>
-      {children}
+      <div className={styles.main} dangerouslySetInnerHTML={{ __html: html }} />
     </>
   );
 };

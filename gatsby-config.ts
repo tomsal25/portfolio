@@ -41,7 +41,6 @@ const config: GatsbyConfig = {
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    "gatsby-transformer-remark",
     "gatsby-plugin-image",
     {
       resolve: `gatsby-transformer-remark`,
@@ -50,7 +49,15 @@ const config: GatsbyConfig = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1200,
+              maxWidth: 800,
+              withWebp: true,
+            },
+          },
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "noreferrer",
             },
           },
         ],

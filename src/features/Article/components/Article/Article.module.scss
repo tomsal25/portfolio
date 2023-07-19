@@ -1,12 +1,46 @@
+@use "@/config/_variable" as var;
+
 .back {
   display: flex;
   gap: 0.5em;
 }
 
 .meta {
-  margin: 1em 1em 2em;
+  margin: 1em;
 }
 
 .date {
   text-align: right;
+}
+
+// markdown style
+.main {
+  margin-bottom: 10em;
+
+  h2 {
+    width: fit-content;
+    background: linear-gradient(transparent 60%, var.$primary-light 85%);
+    background-position-y: -5px;
+  }
+
+  h2,
+  h3 {
+    margin: 2em 0 1em;
+  }
+
+  p + p {
+    margin-top: 1em;
+  }
+
+  ul {
+    margin: 1.5em 0;
+    padding-left: 1.5em;
+    line-height: 2;
+
+    // nested list
+    // stylelint-disable-next-line max-nesting-depth
+    ul {
+      margin: 0.5em 0 1em;
+    }
+  }
 }
