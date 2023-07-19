@@ -5,7 +5,7 @@ import { Layout } from "../features/Layouts";
 
 export const query = graphql`
   query Work {
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+    allMarkdownRemark(sort: { frontmatter: { update: DESC } }) {
       edges {
         node {
           id
