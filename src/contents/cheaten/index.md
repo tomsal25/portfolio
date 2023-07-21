@@ -4,15 +4,25 @@ date: "2023-03-10"
 update: "2023-03-18"
 tags:
   - React
+  - Phaser
+hero: "./hero.png"
 ---
 
 ## リンク
 
-調整中
+[サイトへのリンク](https://cheaten.pages.dev)
 
 ## 概要
 
 「チート」を使って、絶対にクリアできないゲームを攻略するゲーム。「チート」は実際にコードを書き換えることで実現し、直感的にプログラミング学習ができる狙い。
+
+![ゲーム画面(仮)](./game.png)
+<div style="text-align:center">ゲーム画面(仮)</div>
+
+<br>
+
+![コード編集画面(仮)](./code.png)
+<div style="text-align:center">コード編集画面(仮)</div>
 
 ## 使用技術
 
