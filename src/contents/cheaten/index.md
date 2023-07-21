@@ -3,7 +3,7 @@ title: "Cheaten"
 date: "2023-03-10"
 update: "2023-03-18"
 tags:
-  - JavaScript
+  - React
 ---
 
 ## リンク
@@ -16,7 +16,7 @@ tags:
 
 ## 使用技術
 
-- ビルド: vite
+- ビルド: [Vite](https://github.com/vitejs/vite)
 
 - フロントエンド
   - フレームワーク/ライブラリ: preact

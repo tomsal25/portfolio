@@ -3,7 +3,7 @@ title: "FizzBuzz Buzzer Game"
 date: "2023-02-04"
 update: "2023-05-20"
 tags:
-  - JavaScript
+  - Vanilla(js)
 hero: "./hero.png"
 ---
 
