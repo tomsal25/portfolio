@@ -13,7 +13,7 @@ export const query = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "YYYY/MM/DD")
+            # date(formatString: "YYYY/MM/DD")
             update(formatString: "YYYY/MM/DD")
             tags
             title
@@ -42,8 +42,8 @@ const Work = ({ data }: PageProps<Queries.WorkQuery>) => {
           const frontmatter = edge.node.frontmatter;
           if (!frontmatter) return;
 
-          const { date, tags, title, hero } = frontmatter;
-          if (!date || !title) return;
+          const { update, tags, title, hero } = frontmatter;
+          if (!update || !title) return;
 
           const imageData = hero?.childImageSharp?.gatsbyImageData ?? null;
           const image = getImage(imageData);
@@ -51,7 +51,7 @@ const Work = ({ data }: PageProps<Queries.WorkQuery>) => {
           return (
             <Card
               key={edge.node.id}
-              date={date}
+              date={update}
               tags={tags ?? []}
               title={title}
               slug={edge.node.fields?.slug ?? "/404"}
