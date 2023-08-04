@@ -14,6 +14,8 @@ hero: "./hero.png"
 
 [サイトへのリンク](https://debugdojo.netlify.app/)
 
+[ソースへのリンク](https://github.com/tomsal25/debug-dojo-client)
+
 ## 概要
 
 AIが生成した間違いを含むコードをデバッグするゲーム。現在、コードは静的に配信されたもののみ。

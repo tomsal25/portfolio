@@ -13,6 +13,8 @@ hero: "./hero.png"
 
 [サイトへのリンク](/)
 
+[ソースへのリンク](https://github.com/tomsal25/portfolio)
+
 ## 概要
 
 このサイト。
