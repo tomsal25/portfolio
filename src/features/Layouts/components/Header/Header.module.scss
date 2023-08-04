@@ -1,11 +1,16 @@
 @use "@/config/variable" as var;
 
+.box {
+  padding: 1em 5vw;
+}
+
 .header {
   display: flex;
   align-items: center;
 
   height: 3em;
-  margin: 1em 5vw;
+
+  // margin: 1em 5vw;
   padding: 0 5vw;
 
   border: 0.1em dashed var.$black;
