@@ -6,6 +6,7 @@ tags:
   - React
   - MUI
   - ChatGPT
+summary: "AIの書いたコードをデバッグするゲーム"
 hero: "./hero.png"
 ---
 

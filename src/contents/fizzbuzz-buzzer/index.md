@@ -4,6 +4,7 @@ date: "2023-02-04"
 update: "2023-05-20"
 tags:
   - Vanilla(js)
+summary: "FizzBuzzを基にした対戦ゲーム"
 hero: "./hero.png"
 ---
 

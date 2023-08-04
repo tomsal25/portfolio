@@ -5,6 +5,7 @@ update: "2023-05-22"
 tags:
   - ESP32
   - PlatformIO
+summary: "ESP32を用いたIoT開発"
 hero: "./hero.png"
 ---
 

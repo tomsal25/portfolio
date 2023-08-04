@@ -7,11 +7,12 @@ interface Props {
   date: string;
   tags: readonly (string | null)[];
   title: string;
+  text: string;
   slug: string;
   hero?: IGatsbyImageData;
 }
 
-const Card = ({ date, tags, title, slug, hero }: Props) => {
+const Card = ({ date, tags, title, text, slug, hero }: Props) => {
   return (
     <div className={styles.card}>
       {hero && <GatsbyImage image={hero} alt={title} className={styles.hero} />}
@@ -25,7 +26,8 @@ const Card = ({ date, tags, title, slug, hero }: Props) => {
       <Link to={slug}>
         <h2>{title}</h2>
       </Link>
-      <div>{date}</div>
+      <div>{text}</div>
+      <div className={styles.date}>{date}</div>
     </div>
   );
 };

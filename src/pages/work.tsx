@@ -17,6 +17,7 @@ export const query = graphql`
             update(formatString: "YYYY/MM/DD")
             tags
             title
+            summary
             hero {
               childImageSharp {
                 gatsbyImageData(width: 300, height: 150)
@@ -42,7 +43,7 @@ const Work = ({ data }: PageProps<Queries.WorkQuery>) => {
           const frontmatter = edge.node.frontmatter;
           if (!frontmatter) return;
 
-          const { update, tags, title, hero } = frontmatter;
+          const { update, tags, title, summary, hero } = frontmatter;
           if (!update || !title) return;
 
           const imageData = hero?.childImageSharp?.gatsbyImageData ?? null;
@@ -54,6 +55,7 @@ const Work = ({ data }: PageProps<Queries.WorkQuery>) => {
               date={update}
               tags={tags ?? []}
               title={title}
+              text={summary ?? "説明なし"}
               slug={edge.node.fields?.slug ?? "/404"}
               hero={image}
             />

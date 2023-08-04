@@ -5,6 +5,7 @@ update: "2023-03-18"
 tags:
   - React
   - Phaser
+summary: "「チート」を使うプログラミング学習ゲーム"
 hero: "./hero.png"
 ---
 

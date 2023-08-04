@@ -5,6 +5,7 @@ update: "2023-07-21"
 tags:
   - React
   - Gatsby
+summary: "このサイト"
 hero: "./hero.png"
 ---
 
