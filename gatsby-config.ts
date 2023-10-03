@@ -30,14 +30,6 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/contents`,
       },
     },
-    {
-      resolve: `gatsby-plugin-react-css-modules`,
-      options: {
-        filetypes: {
-          ".scss": { syntax: `postcss-scss` },
-        },
-      },
-    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-image",
